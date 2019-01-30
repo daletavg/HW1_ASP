@@ -7,3 +7,17 @@ C:\Users\Dubrov_v\Desktop\HW1_ASP\HW1_ASP\obj\Debug\HW1_ASP.csprojResolveAssembl
 C:\Users\Dubrov_v\Desktop\HW1_ASP\HW1_ASP\obj\Debug\HW1_ASP.csproj.CoreCompileInputs.cache
 C:\Users\Dubrov_v\Desktop\HW1_ASP\HW1_ASP\obj\Debug\HW1_ASP.dll
 C:\Users\Dubrov_v\Desktop\HW1_ASP\HW1_ASP\obj\Debug\HW1_ASP.pdb
+C:\Users\akerz\Desktop\HW1_ASP-master\HW1_ASP\bin\HW1_ASP.dll.config
+C:\Users\akerz\Desktop\HW1_ASP-master\HW1_ASP\bin\HW1_ASP.dll
+C:\Users\akerz\Desktop\HW1_ASP-master\HW1_ASP\bin\HW1_ASP.pdb
+C:\Users\akerz\Desktop\HW1_ASP-master\HW1_ASP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\akerz\Desktop\HW1_ASP-master\HW1_ASP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\akerz\Desktop\HW1_ASP-master\HW1_ASP\obj\Debug\HW1_ASP.csprojAssemblyReference.cache
+C:\Users\akerz\Desktop\HW1_ASP-master\HW1_ASP\obj\Debug\HW1_ASP.csproj.CoreCompileInputs.cache
+C:\Users\akerz\Desktop\HW1_ASP-master\HW1_ASP\obj\Debug\HW1_ASP.csproj.CopyComplete
+C:\Users\akerz\Desktop\HW1_ASP-master\HW1_ASP\obj\Debug\HW1_ASP.dll
+C:\Users\akerz\Desktop\HW1_ASP-master\HW1_ASP\obj\Debug\HW1_ASP.pdb
+C:\Users\akerz\Desktop\HW1_ASP-master\HW1_ASP\bin\EntityFramework.dll
+C:\Users\akerz\Desktop\HW1_ASP-master\HW1_ASP\bin\EntityFramework.SqlServer.dll
+C:\Users\akerz\Desktop\HW1_ASP-master\HW1_ASP\bin\EntityFramework.xml
+C:\Users\akerz\Desktop\HW1_ASP-master\HW1_ASP\bin\EntityFramework.SqlServer.xml

@@ -41,10 +41,13 @@
                     <asp:TableCell>
                     </asp:TableCell>
                     <asp:TableCell>
-                        <asp:Button ID="Button1" runat="server" class="btn btn-success" style="float:right" Text="Registration" />
+                        
+                        <asp:Button ID="registration" onclick="Registrate" runat="server" class="btn btn-success" style="margin: 0.1em;float:right" Text="Registration" />
+                        <asp:Button ID="back" runat="server" class="btn btn-success" PostBackUrl="Default.aspx" style="margin: 0.1em;float:right" Text="Back" />
                     </asp:TableCell>
                 </asp:TableRow>
             </asp:Table> 
+            <asp:PlaceHolder ID="alerts" runat="server"></asp:PlaceHolder>
         </div>
     </form>
 </body>
