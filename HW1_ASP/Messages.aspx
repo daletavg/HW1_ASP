@@ -11,7 +11,8 @@
 <body>
     <form id="form1" runat="server">
         <div class="container">
-            
+            <asp:ScriptManager ID="ScriptManager1" runat="server">
+            </asp:ScriptManager>
 
             <nav class="navbar navbar-dark bg-dark">
                 <span class="navbar-text">
@@ -20,34 +21,27 @@
                 <asp:Button class="btn btn-secondary" ID="exit_user" runat="server" Text="Exit" style="float: right" OnClick="exit_user_OnClick" />
             </nav>
             
-            
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+         <ContentTemplate>
             <div class="input-group mb-3" style="margin-top: 0.5em ">
                 <asp:TextBox type="text" ID="my_message" class="form-control" aria-describedby="basic-addon2" runat="server" ></asp:TextBox>
                 <div class="input-group-append">
-                    <asp:Button class="btn btn-outline-secondary" ID="send_message" runat="server" Text="Send" />
+                    <asp:Button class="btn btn-outline-secondary" ID="send_message" runat="server" OnClick="send_message_OnClick" Text="Send" />
                 </div>
             </div>
+            </ContentTemplate>
+        </asp:UpdatePanel>
             
             
             
             
-            
-           <%-- <asp:Timer ID="Timer1" OnTick="Timer1_OnTick" runat="server"></asp:Timer>--%>
-           
-                <asp:Table ID="Table1" class="table" runat="server">
-                    <asp:TableHeaderRow>
-                        <asp:TableHeaderCell >
-                            <asp:Label ID="Label1" runat="server" Text="Login "></asp:Label>
-                        </asp:TableHeaderCell>
-                        <asp:TableHeaderCell>
-                            <asp:Label ID="Label2" runat="server" Text="Message "></asp:Label>
-                        </asp:TableHeaderCell>
-                        <asp:TableHeaderCell>
-                            <asp:Label ID="Label3" runat="server" Text="Date "></asp:Label>
-                        </asp:TableHeaderCell>
-                    </asp:TableHeaderRow>
-                </asp:Table>
-
+         
+            <asp:UpdatePanel ID="UpdatePanel21" runat="server">
+                <ContentTemplate>
+                    <div id="addTable" runat="server"></div>
+                    <asp:Timer ID="Timer1" OnTick="Timer1_OnTick" Interval="1000" runat="server"></asp:Timer>
+                </ContentTemplate>
+            </asp:UpdatePanel>
         </div>
     </form>
 </body>

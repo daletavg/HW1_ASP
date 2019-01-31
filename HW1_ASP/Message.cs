@@ -8,7 +8,6 @@ namespace HW1_ASP
 
     public partial class Message
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int id { get; set; }
 
         public int id_user { get; set; }
@@ -16,7 +15,7 @@ namespace HW1_ASP
         [Column("Message")]
         public string Message1 { get; set; }
 
-        [Column(TypeName = "date")]
+        [StringLength(50)]
         public string Message_Date { get; set; }
 
         public virtual User User { get; set; }

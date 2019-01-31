@@ -18,49 +18,57 @@ namespace HW1_ASP
                 name_usr.InnerText = Session["Login"].ToString();
             }
 
-            LoadMessages();
+            LoadMessageSecond();
 
         }
 
         protected void exit_user_OnClick(object sender, EventArgs e)
         {
            Session.Abandon();
+            Response.Redirect("Default.aspx");
         }
 
         protected void Timer1_OnTick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            LoadMessageSecond();
         }
 
-        private void LoadMessages()
+        private void LoadMessageSecond()
         {
+            string newString = "<table class='table'><tr><th>Name</th><th>Message</th><th>Date</th></tr>";
             using (var db = new Guest())
             {
                 var allMessages = db.Messages.ToList();
+                allMessages.Reverse();
                 foreach (var i in allMessages)
                 {
-                    TableRow tmpRow = new TableRow();
-
-                    HtmlGenericControl myP = new HtmlGenericControl("p");
-                    myP.InnerText = i.User.Name;
-                    TableCell tmpCell = new TableCell();
-                    tmpCell.Controls.Add(myP);
-                    tmpRow.Controls.Add(tmpCell);
-
-                    myP = new HtmlGenericControl("p");
-                    myP.InnerText = i.Message1;
-                    tmpCell = new TableCell();
-                    tmpCell.Controls.Add(myP);
-                    tmpRow.Controls.Add(tmpCell);
-
-                    myP = new HtmlGenericControl("p");
-                    myP.InnerText = i.Message_Date.ToString();
-                    tmpCell = new TableCell();
-                    tmpCell.Controls.Add(myP);
-                    tmpRow.Controls.Add(tmpCell);
-
-                    Table1.Controls.Add(tmpRow);
+                    newString += "<tr>";
+                    newString += "<td>"+i.User.Name+"</td>";
+                    newString += "<td>" + i.Message1 + "</td>";
+                    newString += "<td>" + i.Message_Date + "</td>";
+                    newString += "</tr>";
                 }
+            }
+
+            newString += "</table>";
+            addTable.InnerHtml = "";
+            addTable.InnerHtml = newString;
+        }
+
+        
+        protected void send_message_OnClick(object sender, EventArgs e)
+        {
+            using (var db = new Guest())
+            {
+                var tmpName = Session["Login"].ToString();
+                var tmp = db.Users.First(i =>
+                    i.Name == tmpName);
+
+                Message msg = new Message(){Message1 = my_message.Text,
+                    User = tmp,
+                    Message_Date = DateTime.Now.ToString() };
+                db.Messages.Add(msg);
+                db.SaveChanges();
             }
         }
     }
