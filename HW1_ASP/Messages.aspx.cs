@@ -17,9 +17,35 @@ namespace HW1_ASP
             {
                 name_usr.InnerText = Session["Login"].ToString();
             }
+            else
+            {
+                my_message.Visible = false;
+                send_message.Visible = false;
+                helloText.Visible = false;
+                exit_user.Visible = false;
+                Button log = new Button();
+                log.Text = "Login";
+                log.Attributes.Add("class", "btn btn-success");
+                log.Click += login_OnClick;
+                login.Controls.Add(log);
+                log = new Button();
+                log.Text = "Registrate";
+                log.Attributes.Add("class", "btn btn-success");
+                log.Click += registrate_OnClick;
+                registration.Controls.Add(log);
+            }
 
             LoadMessageSecond();
 
+        }
+
+        protected void login_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
+        }
+        protected void registrate_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Regestration.aspx");
         }
 
         protected void exit_user_OnClick(object sender, EventArgs e)

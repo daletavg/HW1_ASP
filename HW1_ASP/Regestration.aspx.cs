@@ -20,6 +20,18 @@ namespace HW1_ASP
 
         protected void Registrate(object sender, EventArgs e)
         {
+            if (pass_one.Text != pass_two.Text)
+            {
+                pass_two.Attributes["class"] = "";
+                pass_two.Attributes["class"] = "form-control is-invalid";
+                return;
+            }
+            else
+            {
+                pass_two.Attributes["class"] = "";
+                pass_two.Attributes["class"] = "form-control";
+            }
+
             using (var user = new Guest())
             {
                 if (user.Users.Any(o => o.Name == login.Text))

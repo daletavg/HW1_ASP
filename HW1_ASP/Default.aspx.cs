@@ -30,6 +30,8 @@ namespace HW1_ASP
         }
         protected void LoginOn(object sender, EventArgs e)
         {
+            password.Attributes["class"] = "";
+            password.Attributes["class"] = "form-control";
             using (var user = new Guest())
             {
                 //GetHeshMd5 hash = new GetHeshMd5();
@@ -52,6 +54,8 @@ namespace HW1_ASP
                     myDiv.InnerText = "Wrong password!";
                     alerts.Controls.Clear();
                     alerts.Controls.Add(myDiv);
+                    password.Attributes["class"] = "";
+                    password.Attributes["class"] = "form-control is-invalid";
                 }
 
 

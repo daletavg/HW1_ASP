@@ -15,22 +15,29 @@
             </asp:ScriptManager>
 
             <nav class="navbar navbar-dark bg-dark">
-                <span class="navbar-text">
+                <span class="navbar-text" id="helloText" runat="server">
                     Hello, <span runat="server" id="name_usr"></span>.
                 </span>
-                <asp:Button class="btn btn-secondary" ID="exit_user" runat="server" Text="Exit" style="float: right" OnClick="exit_user_OnClick" />
+                <div runat="server">
+                    <asp:Button class="btn btn-secondary" ID="exit_user" runat="server" Text="Exit" style="float: right" OnClick="exit_user_OnClick" />
+                    <table runat="server">
+                        <tr>
+                            <td runat="server" id ="login"></td>
+                            <td runat="server" id="registration"></td>
+                        </tr>
+                    </table>
+                </div>
+                
             </nav>
             
-        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-         <ContentTemplate>
+
             <div class="input-group mb-3" style="margin-top: 0.5em ">
                 <asp:TextBox type="text" ID="my_message" class="form-control" aria-describedby="basic-addon2" runat="server" ></asp:TextBox>
                 <div class="input-group-append">
                     <asp:Button class="btn btn-outline-secondary" ID="send_message" runat="server" OnClick="send_message_OnClick" Text="Send" />
                 </div>
             </div>
-            </ContentTemplate>
-        </asp:UpdatePanel>
+
             
             
             

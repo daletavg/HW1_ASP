@@ -31,6 +31,15 @@ namespace HW1_ASP {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
+        /// helloText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl helloText;
+        
+        /// <summary>
         /// name_usr control.
         /// </summary>
         /// <remarks>
@@ -49,13 +58,22 @@ namespace HW1_ASP {
         protected global::System.Web.UI.WebControls.Button exit_user;
         
         /// <summary>
-        /// UpdatePanel1 control.
+        /// login control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell login;
+        
+        /// <summary>
+        /// registration control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell registration;
         
         /// <summary>
         /// my_message control.
